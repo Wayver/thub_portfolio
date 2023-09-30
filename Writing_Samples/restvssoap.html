@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TH Design</title>
+    <title>Expandable Buttons with Image</title>
     <style>
         body {
             margin: 0;
@@ -50,22 +50,33 @@
             text-decoration: none;
             color: #333;
         }
+
+        #content {
+            flex: 1; /* Expand to fill the available width */
+            padding: 20px; /* Add padding to create space between the sidebar and content */
+        }
+
+        object {
+            width: 100%; /* Make the object fill its container horizontally */
+            height: 100vh; /* Make the object fill the full height of the viewport */
+            border: none; /* Remove border, if any */
+        }
     </style>
 </head>
 <body>
     <div id="header">
-        <img src="./Images/costback.jpg" alt="Header Image" style="max-width: 100%; max-height: 200px;">
+        <img src="your-image.jpg" alt="Header Image" style="max-width: 100%; height: auto;">
     </div>
     
     <div id="container">
         <div id="sidebar">
-            <div class="button" onclick="toggleLinks('button1')">Writing Samples</div>
+            <div class="button" onclick="toggleLinks('button1')">Home</div>
             <div class="link-list" id="button1">
-                <a href="./Writing_Samples/tictactoe.html">Learning to Play Tic Tac Toe</a>
-                <a href="./Writing_Samples/restvssoap.html">Choosing Between REST vs SOAP APIs</a>
-                <a href="./Writing_Samples/findneedles.html">Example C++ Function Documentation</a>
+                <a href="./index.html">Home</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
             </div>
-            <div class="button" onclick="toggleLinks('button2')">Projects</div>
+            <div class="button" onclick="toggleLinks('button2')">Button 2</div>
             <div class="link-list" id="button2">
                 <a href="#">Link 4</a>
                 <a href="#">Link 5</a>
@@ -73,11 +84,9 @@
             </div>
         </div>
         <div id="content">
-            <h1>Taylor Hubbard, Technical Writer</h1>
-	    <p>I'm a highly technical, adaptable problem solver who thrives on learning and passing my knowledge on to others.</p>
-	    <p>I combine my engineering, programming, and technical writing skills to deliver top-quality documentation tailed for the appropriate audience</p>
-	    <p>In my current role I document complex maintenance, facility systems, and deinstallation procedures for Microchip Technologies at their semiconductor fabrication plant in Gresham, OR.</p>
-	    <p>Formerly I supported multiple EDA products for Mentor Graphics / Siemens. During those years I contributed heavily to the documentation and code examples for Catapult HLS, managed the release process for Questa SIM, and was documentation owner for Austemper Functional Safety.</p>
+            <h1>Main Content</h1>
+            <p>This is the main content of your webpage.</p>
+            <object data="../PDFsamples/rest_vs_soap.pdf#toolbar=0" type="application/pdf"></object>
         </div>
     </div>
 
@@ -93,4 +102,3 @@
     </script>
 </body>
 </html>
-
