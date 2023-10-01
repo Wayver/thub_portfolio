@@ -20,11 +20,12 @@
 
         #container {
             display: flex;
+            flex-wrap: wrap; /* Allow content to wrap on smaller screens */
         }
 
         #sidebar {
             background: #eee;
-            width: 200px;
+            width: 100%; /* Sidebar takes full width on mobile */
             padding: 20px;
         }
 
@@ -55,13 +56,18 @@
         #content {
             flex: 1; /* Expand to fill the available width */
             padding: 20px; /* Add padding to create space between the sidebar and content */
-            margin-left: 20px; /* Add margin to create space between the sidebar and content */
         }
 
         object {
             width: 100%;
             height: 100vh;
             border: none;
+        }
+
+        @media (min-width: 768px) { /* Apply styles for screens wider than 768px (adjust breakpoint as needed) */
+            #sidebar {
+                width: 200px; /* Restore sidebar width for larger screens */
+            }
         }
     </style>
 </head>
@@ -75,7 +81,7 @@
             <div class="button" onclick="toggleLinks('button1')">Writing Samples</div>
             <div class="link-list" id="button1">
                 <a href="./Writing_Samples/tictactoe.html">Learning to Play Tic Tac Toe</a>
-                <a href="./Writing_Samples/restvssoap.html">Choosing Between REST and SOAP APIs</a>
+                <a href="./Writing_Samples/restvssoap.html">Choosing Between REST vs SOAP APIs</a>
                 <a href="./Writing_Samples/findneedles.html">Example C++ Function Documentation</a>
             </div>
             <div class="button" onclick="toggleLinks('button2')">Projects</div>
