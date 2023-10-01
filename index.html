@@ -4,72 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expandable Buttons with Image</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        #header {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-
-        #container {
-            display: flex;
-            flex-wrap: wrap; /* Allow content to wrap on smaller screens */
-        }
-
-        #sidebar {
-            background: #eee;
-            width: 100%; /* Sidebar takes full width on mobile */
-            padding: 20px;
-        }
-
-        .button {
-            cursor: pointer;
-            padding: 10px;
-            background: #333;
-            color: #fff;
-            margin-bottom: 10px;
-            text-decoration: none;
-        }
-
-        .button:hover {
-            background: #555;
-        }
-
-        .link-list {
-            display: none;
-        }
-
-        .link-list a {
-            display: block;
-            padding: 5px 0;
-            text-decoration: none;
-            color: #333;
-        }
-
-        #content {
-            flex: 1; /* Expand to fill the available width */
-            padding: 20px; /* Add padding to create space between the sidebar and content */
-        }
-
-        object {
-            width: 100%;
-            height: 100vh;
-            border: none;
-        }
-
-        @media (min-width: 768px) { /* Apply styles for screens wider than 768px (adjust breakpoint as needed) */
-            #sidebar {
-                width: 200px; /* Restore sidebar width for larger screens */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/central_style.css">a
 </head>
 <body>
     <div id="header">
