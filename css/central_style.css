@@ -19,7 +19,7 @@
  		
    
 		/*justify-content: space-between;*/
-    	        
+    	        overflow: hidden;
     		background-color: #333; /* Customize the background color */
     		color: #fff; /* Customize the text color */
 	}
@@ -29,14 +29,16 @@
 	    display: flex;
     	    align-items: center;
     	    padding: 10px;
+
+	    justify-content: space-between;
 	}
 
 	/* Style the logo image */
 	.logo img {
 		float: left;
 		margin-right: 20px;
-    		max-width: 150px; /* Customize the max width of the image */
-		height: auto; /* Maintain image aspect ratio */
+    		max-width: 150px;  /* Customize the max width of the image */
+                height: auto; /* Maintain image aspect ratio */
 	}
 
 	/* Style the header text */
@@ -108,6 +110,7 @@
 
 	    .site-header {
         padding: 5px; /* Adjust padding for mobile */
+	width: 100%;
     }
 
     .header-text h1 {
