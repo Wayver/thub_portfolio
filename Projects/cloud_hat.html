@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="../css/central_style.css">
 </head>
 <body>
-    <div id="header">
-        <img src="../Images/costback.jpg" alt="Header Image" style="max-width: 100%; max-height: 200px;">
-    </div>
-    
+
+        <iframe src="../header.html" frameborder="0" scrolling="no" width="100%"></iframe>
+
     <div id="container">
          <div id="sidebar">
             <a class="button" href="../index.html">Home</a>
@@ -19,6 +18,14 @@
             <h1>Lightning Hat Halloween Costume</h1>
             <img src="../Images/dark.gif" alt="Header Image" style="max-width: 100%; max-height: 200px;">
 	    <p>In 2019 I set out to create a wizard costume that achieved the illusion of lighting flashing within clouds. This page explains my design process, as well as some of the code used to control the animations.</p>
+	    <pre><code> //lightweight class to map a pixel's spatial position relative to its neighbors
+		    // need this for realistic lightning bolts  
+class PixelInfo {
+  public :
+  byte * top;
+  byte * bot;
+  PixelInfo () {}
+  }; </code></pre>
 	</div>
     </div>
 
