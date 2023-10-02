@@ -4,12 +4,55 @@
             font-family: Arial, sans-serif;
         }
 
+
+	code {
+            background-color: #f0f0f0; /* Set the background color */
+            padding: 7px; /* Add some padding for readability */
+            font-family: Consolas, monospace; /* Use a monospaced font for code */
+        }
+
+
+        /* attempting to use common header */
+	 /* Reset default margin and padding for the header */
+        .site-header {
+ 		
+   
+		/*justify-content: space-between;*/
+    	        
+    		background-color: #333; /* Customize the background color */
+    		color: #fff; /* Customize the text color */
+	}
+
+	.header-content {
+	    
+	    display: flex;
+    	    align-items: center;
+    	    padding: 10px;
+	}
+
+	/* Style the logo image */
+	.logo img {
+		float: left;
+		margin-right: 20px;
+    		max-width: 150px; /* Customize the max width of the image */
+		height: auto; /* Maintain image aspect ratio */
+	}
+
+	/* Style the header text */
+	.header-text {
+    		margin-left: 10px; /* Adjust spacing between the image and text */
+    		font-size: 24px; /* Customize the text size */
+		overflow: hidden;
+	}
+
+
+        /*
         #header {
             background: #333;
             color: #fff;
-            text-align: center;
+            text-align: left;
             padding: 10px;
-        }
+        }*/
 
         #container {
             display: flex;
@@ -61,6 +104,14 @@
             #sidebar {
                 width: 200px; /* Restore sidebar width for larger screens */
             }
+
+	    .site-header {
+        padding: 5px; /* Adjust padding for mobile */
+    }
+
+    .header-text h1 {
+        font-size: 20px; /* Adjust text size for mobile */
+    }
         }
 
 
