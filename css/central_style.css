@@ -1,7 +1,8 @@
-        body {
-            margin: 0;
+        bodya {
+            max-width: 100%;
+	    margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+	    font-family: Arial, sans-serif;
         }
 
 
@@ -24,7 +25,7 @@
 	}
 
 	.header-content {
-	    
+	    max-width: 100%;
 	    display: flex;
     	    align-items: center;
     	    padding: 10px;
