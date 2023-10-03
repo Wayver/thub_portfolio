@@ -130,7 +130,13 @@ code {
 
 	    #content {
 		    width 100%;
-	    }
+	   }
+
+          pre {
+            padding: 5px; /* Reduce padding on smaller screens */
+            font-size: 12px; /* Reduce font size on smaller screens */
+          }
+
 
 	    .site-header {
         padding: 5px; /* Adjust padding for mobile */
