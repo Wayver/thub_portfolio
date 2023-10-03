@@ -1,4 +1,6 @@
-        body {
+        
+
+	body {
             max-width: 100%;
 	    margin: 0;
             padding: 0;
@@ -93,6 +95,7 @@
         }
 
         #content {
+            		
             flex: 1; /* Expand to fill the available width */
             padding: 20px; /* Add padding to create space between the sidebar and content */
         }
@@ -107,6 +110,10 @@
             #sidebar {
                 width: 200px; /* Restore sidebar width for larger screens */
             }
+
+	    #content {
+		    width 100%;
+	    }
 
 	    .site-header {
         padding: 5px; /* Adjust padding for mobile */
