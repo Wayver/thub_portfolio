@@ -19,15 +19,47 @@
             <h1>Lightning Hat Halloween Costume</h1>
             <img src="../Images/dark.gif" alt="Header Image" style="max-width: 100%; max-height: 200px;">
 	    <p>In 2019 I set out to create a wizard costume that achieved the illusion of lighting flashing within clouds. This page explains my design process, as well as some of the code used to control the animations.</p>
-	    <code> //lightweight class to map a pixel's spatial position relative to its neighbors
-		    // need this for realistic lightning bolts  
+	    <p>There were several challenges to tackle, but one the larger ones was determining how to map the position of the LEDs relative to one another. Without creating this map, there would be no way to specify which pixels the lighting animation functions should illuminate. I knew I would be using an addressable RGBW LED strip, but the addresses on the strip are sequential, I needed to represent their relation to their neighbors as it would once built into the costume. Because the only feasible way to distribute the LEDs evenly over the surface of the conical hat was to wind the strip in a spiral, I decide to approximate the spiral as a set of concentric circles at different heights.</p>
+	    <p>I wanted to store the ID of each pixel's upstairs, downstairs, and left and right neighbors. So, I created a small, lightweight class as shown below.</p>
+	    <pre>
+	    <code>//lightweight class to map a pixel's spatial position relative to its neighbors<br>//need this for realistic lightning bolts.
+
 class PixelInfo {
   public :
   byte * top;
   byte * bot;
   PixelInfo () {}
-  }; </code>
-     </div>
+}; </code></pre>
+	  <p>The Arduino Uno has 32kb of memory, so realizing that the left and right neighbors do not need to be stored, sience the strip address are sequential, was helpful to store memory. Because the top and bottom neighbors for each pixel needed to be hard coded, I stored them once in an array of byte type numbers, then used pointers in the PixelInfo class to reduce memory consumption</p>
+	  <p>Next, I defined a simple function to illuminate a single pixel, lightningStrike, and five additional functions to animate different lightning patterns. Code for the "individual jagged" lightning is shown below.</p>
+     
+	  <pre><code>void bolt () {
+  //Serial.println("lightning bolt! lightning bolt!");
+  int lrod;
+  for (int chain_len=0; chain_len < 10; chain_len++) {
+ 
+    if (chain_len==0) { 
+      lrod = random(NUM_LEDS);
+      lightningStrike(lrod);
+      delay_show(50);
+    } else {
+     
+       int nselect = random(3);    
+
+       if(nselect==0) { lrod = *(Stars[lrod].top); }
+       if(nselect==1) { lrod = *(Stars[lrod].bot); }
+       if(nselect==2) { lrod += 1; }
+       if(nselect==3) { lrod -= 1; }      
+       if(lrod >= 90 || lrod <= 0 ) {
+         break;
+       } else {
+         lightningStrike(lrod);
+         delay_show(50);
+       }
+    }
+  }
+} </code></pre> 
+ </div>
 
     <script>
         function toggleLinks(buttonId) {

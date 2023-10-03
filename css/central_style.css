@@ -1,4 +1,21 @@
-        
+        /* Style the code block container (pre element) */
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow-x: auto; /* Add horizontal scroll for long lines */
+    white-space: pre;
+}
+
+/* Style the code inside the code block (code element) */
+code {
+	display: block;
+	white-space: pre-wrap;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
 
 	body {
             max-width: 100%;
