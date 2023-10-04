@@ -83,11 +83,12 @@ code {
 
         #sidebar {
             background: #eee;
-            width: 100%; /* Sidebar takes full width on mobile */
+            width: 150px; /* Sidebar takes full width on mobile */
             padding: 20px;
         }
 
         .button {
+	    display: block;
             cursor: pointer;
             padding: 10px;
             background: #333;
@@ -123,9 +124,9 @@ code {
             border: none;
         }
 
-        @media (min-width: 768px) { /* Apply styles for screens wider than 768px (adjust breakpoint as needed) */
+        @media (max-width: 768px) { /* Apply styles for screens wider than 768px (adjust breakpoint as needed) */
             #sidebar {
-                width: auto; /* Restore sidebar width for larger screens */
+                width: 100%; /* Restore sidebar width for larger screens */
             }
 
 	    #content {
@@ -138,13 +139,23 @@ code {
           }
 
 
+.header-content {
+        flex-direction: column; /* Stack logo and text vertically */
+        align-items: center; /* Center-align content */
+    }
+
+         .logo img {
+            max-width: 100px; /* Reduce logo width */
+          }
+
+
 	    .site-header {
         padding: 5px; /* Adjust padding for mobile */
 	width: 100%;
     }
 
     .header-text h1 {
-        font-size: 20px; /* Adjust text size for mobile */
+        font-size: 15px; /* Adjust text size for mobile */
     }
         }
 
