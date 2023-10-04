@@ -125,11 +125,11 @@ code {
 
         @media (min-width: 768px) { /* Apply styles for screens wider than 768px (adjust breakpoint as needed) */
             #sidebar {
-                width: 200px; /* Restore sidebar width for larger screens */
+                width: auto; /* Restore sidebar width for larger screens */
             }
 
 	    #content {
-		    width 100%;
+		    width: 100%;
 	   }
 
           pre {
