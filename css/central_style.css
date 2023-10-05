@@ -77,7 +77,8 @@ code {
         }*/
 
         #container {
-            display: flex;
+            max-width: 100%;
+	    display: flex;
             flex-wrap: wrap; /* Allow content to wrap on smaller screens */
         }
 
