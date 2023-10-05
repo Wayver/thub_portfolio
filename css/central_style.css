@@ -63,7 +63,7 @@ code {
 	/* Style the header text */
 	.header-text {
     		margin-left: 10px; /* Adjust spacing between the image and text */
-    		font-size: 24px; /* Customize the text size */
+    		font-size: 20px; /* Customize the text size */
 		overflow: hidden;
 	}
 
@@ -115,7 +115,7 @@ code {
         #content {
             		
             flex: 1; /* Expand to fill the available width */
-            padding: 20px; /* Add padding to create space between the sidebar and content */
+            padding: 10px; /* Add padding to create space between the sidebar and content */
         }
 
         object {
